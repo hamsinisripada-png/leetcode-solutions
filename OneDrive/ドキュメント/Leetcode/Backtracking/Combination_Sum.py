@@ -20,3 +20,27 @@ class Solution:
 
         backtrack(0, [], target)
         return result
+
+
+"""
+LeetCode 39 - Combination Sum
+Difficulty: Medium
+
+Approach:
+- Use Backtracking (Depth-First Search) to generate all possible combinations.
+- Start from a candidate and keep adding numbers to the current combination.
+- If the remaining target becomes 0, a valid combination is found.
+- If the remaining target becomes negative, stop exploring that path.
+- Since a number can be used multiple times, the recursive call uses the
+  same index (i) instead of moving to the next index.
+- Backtracking removes the last added number and explores other possibilities.
+
+Time Complexity:
+- O(N^(T/M)) in the worst case
+    N = number of candidates
+    T = target value
+    M = smallest candidate value
+
+Space Complexity:
+- O(T/M) for the recursion stack (excluding output storage).
+"""

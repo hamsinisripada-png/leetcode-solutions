@@ -41,3 +41,26 @@ class Solution:
             return True
 
         backtrack()
+
+"""
+LeetCode 37 - Sudoku Solver
+Difficulty: Hard
+
+Approach:
+- Use Backtracking to fill empty cells ('.') in the Sudoku board.
+- For each empty cell, try placing digits from 1 to 9.
+- Before placing a digit, check if it is valid according to Sudoku rules:
+    1. The digit must not already exist in the same row.
+    2. The digit must not already exist in the same column.
+    3. The digit must not already exist in the corresponding 3x3 sub-grid.
+- If a valid digit is found, place it and recursively solve the remaining board.
+- If a dead end is reached, undo the placement (backtrack) and try another digit.
+- Continue until the entire board is solved.
+
+Time Complexity:
+- Worst Case: O(9^(empty cells))
+- In practice, much faster due to constraint pruning.
+
+Space Complexity:
+- O(empty cells) for recursion stack.
+"""

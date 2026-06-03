@@ -1,3 +1,10 @@
+### 43. Multiply Strings
+- **Difficulty:** Medium
+- **Approach:** Simulated grade-school multiplication using an array of size `m + n` to store intermediate results and carries.
+- **Time Complexity:** O(m × n)
+- **Space Complexity:** O(m + n)
+
+
 class Solution:
     def multiply(self, num1: str, num2: str) -> str:
         if num1 == "0" or num2 == "0":
